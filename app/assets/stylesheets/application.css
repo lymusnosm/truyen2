@@ -80,15 +80,6 @@ a:hover {
   outline: 0;
 }
 
-a:link {
-    color: white;
-}
-a:visited {
-    color: white;
-}
-a:hover {
-  color: yellow;
-}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -6811,6 +6802,14 @@ body {
   background-attachment: fixed;
 }
 
-
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+  color: yellow;
+}
 
 /* PINGENDO COMMENT DO NOT REMOVE */
