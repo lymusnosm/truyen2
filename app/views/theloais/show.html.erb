@@ -9,14 +9,14 @@
   rel="stylesheet" type="text/css">
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-97841360-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+  </script>
 </head>
 
 <body>
@@ -138,43 +138,38 @@
         </div>
       </div>
 
-<% @truyens.each do |t|%>
+      <% @truyens.each do |t|%>
       <div class="section">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><img src="<%=t.image%>"
-                  class="img-responsive"></a>
-                </div>
-                <div class="col-md-3">
-                  <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_vn %></a></h1>
-                  <p><%= truncate t.content_vn, length: 200 %></p>
-                </div>
-                <div class="col-md-3">
-                  <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_en %></a></h1>
-                    <p><%= truncate t.content_vn, length: 200 %></p>
-                </div>
-                <div class="col-md-2"><p class="text-right"><%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%></p></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><img src="<%=t.image%>"
+                class="img-responsive"></a>
               </div>
+              <div class="col-md-3">
+                <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_vn %></a></h1>
+                <p><%= truncate t.content_vn, length: 200 %></p>
+              </div>
+              <div class="col-md-3">
+                <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_en %></a></h1>
+                <p><%= truncate t.content_vn, length: 200 %></p>
+              </div>
+              <div class="col-md-2"><p class="text-right"><%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%></p></div>
             </div>
           </div>
-          <%end%>
+        </div>
+        <%end%>
 
-
-
-
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <hr>
-                </div>
-                <p>FAM-Truyện Song Ngữ</p>
-              </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <hr>
             </div>
-
-
+            <p>FAM-Truyện Song Ngữ</p>
           </div>
+        </div>
 
+      </div>
 
-          </body>
-          </html>
+    </body>
+    </html>
