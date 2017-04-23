@@ -4,7 +4,8 @@ Feature: dangnhap
   I want to sign in
 
   Scenario: Dang Nhap
-    Given I am on home page
-    Then I should see "Đăng Nhập"
-    When I click "Đăng Nhập"
-    Then I should see "KHÔNG BAO GIỜ BỎ CUỘC"
+    Given I am on the login page
+    When I fill in "EMAIL" with "vulong@email.com"
+    When I fill in "PASSWORD" with "123456"
+    When I click "ĐĂNG NHẬP"
+    Then I should be on home page
