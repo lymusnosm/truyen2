@@ -16,7 +16,7 @@
             <ul>
               <% @users.each do |t|%>
               <li>
-                <%= t.first_name%><%= t.last_name%><%= t.email%>
+                <%="first name : #{t.first_name} | last name : #{t.last_name} | email : #{t.email}"%>
               </li>
               <%end%>
             </ul>
@@ -25,7 +25,7 @@
             <ul>
               <% @binhluans.each do |t|%>
               <li>
-                <%= t.content%><%= t.truyen_id%><%= t.user_id%>
+                <%="noi dung bl : #{t.content} | thuoc truyen : #{t.truyens.name_vn} | thuoc user : #{t.user_id}"%>
                 <%= link_to 'DELETE', xoabinhluan_path(t), method: :delete ,class: "btn btn-default"%>
               </li>
               <%end%>
