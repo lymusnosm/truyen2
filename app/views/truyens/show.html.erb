@@ -22,7 +22,7 @@
 <body>
 
 <div class ="section">
-<%= @truyen.rate%>
+
     <!-- LOGO -->
     <div class="container">
       <div class="row">
@@ -70,7 +70,7 @@
 
                 <!-- NEU DANG NHAP ROI NHUNG CHUA RATE -->
 
-                <% if @rated === false%>
+                <% if @rated === false %>
                 <div class="row">
                   <%= form_for (@rating) do |f|%>
                   <%= f.hidden_field :truyen_id, :value => @truyen.id %>
@@ -87,15 +87,13 @@
                     <%= f.radio_button :rate ,"1",id: "star1" %><label class = "full" for="star1" title="Tồi Tệ - 1 star"></label>
                     <%= f.radio_button :rate ,"0.5",id: "starhalf"%><label class="half" for="starhalf" title="Như CC - 0.5 stars"></label>
                   </fieldset>
-                  <%= form_for (@truyen) do |f|%>
-                  <%= f.hidden_field :rate, :value => @average_rate %>
-                  <%end%>
+                  
                   <%= f.submit "Đánh Giá",class: "btn btn-default" %>
                   <%end%>
                 </div>
                 <br>
                 <div class="row">
-                  <% if @rating_num != 0%>
+                  <% if @rating_num != 0 and @average_rate != nil%>
                   <h3><%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%></h3>
 
                    <!--HIEN THI SAO TUONG UNG VOI DIEM -->
@@ -138,7 +136,7 @@
                 </div>
                 <br>
                 <div class="row">
-                  <% if @rating_num != 0%>
+                  <% if @rating_num != 0 and @average_rate != nil%>
                   <h3><%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%></h3>
 
                    <!--HIEN THI SAO TUONG UNG VOI DIEM -->
@@ -181,11 +179,11 @@
                     <%= f.radio_button :rate ,"0.5",id: "starhalf"%><label class="half" for="starhalf" title="Như CC - 0.5 stars"></label>
                   </fieldset>
                   <%end%>
-                  <a href="<%login_path%>" class= "btn btn-default">Đăng nhập để đánh giá</a>
+                  <a href="<%=login_path%>" class= "btn btn-default">Đăng nhập để đánh giá</a>
                 </div>
                 <br>
                 <div class="row">
-                  <% if @rating_num != 0%>
+                  <% if @rating_num != 0 and @average_rate != nil%>
                   <h3><%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%></h3>
 
                   <!--HIEN THI SAO TUONG UNG VOI DIEM -->
