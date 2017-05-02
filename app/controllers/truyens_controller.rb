@@ -18,7 +18,6 @@ class TruyensController < ApplicationController
        end
     end
 
-
     @rating_num=@truyen.ratings.count
     @average_rate=@truyen.ratings.average(:rate)
 
@@ -31,10 +30,12 @@ class TruyensController < ApplicationController
     end
 
   end
+
   def all
     @theloais=Theloai.all
     @truyens=Truyen.order("name_vn ASC")
   end
+
   def search
     @truyens = Truyen.search(params[:search])
     @theloais=Theloai.all

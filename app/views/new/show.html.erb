@@ -63,29 +63,41 @@
               <p class="text-right">
                 <p>Cập Nhật</p>
                 <%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%>
+                <br>
 
+                <!-- CODE LAY DU LIEU RATE TUNG TRUYEN ( CODE NAY DI KEM CODE TRONG CONTROLLER)-->
+                <% @average_rate=t.ratings.average(:rate) %>
+                <% @rating_num=t.ratings.count %>
+                <% if @rating_num != 0 and @average_rate != nil %>
+                <% @Is_average_rate_int=(@average_rate -@average_rate.to_i)>0?false : true %>
+                <% @count=@average_rate.to_i %>
+                <% if @Is_average_rate_int %>
+                <% @count=@average_rate %>
+                <% end %>
+                <% end %>
 
-                
-                <% if @rating_num != 0%>
-                  <%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%>
+                <div class="row">
+                <br>
+                  <% if @rating_num != 0 %>
 
-                  <!--HIEN THI SAO TUONG UNG VOI DIEM -->
-                  
+                   <!--HIEN THI SAO TUONG UNG VOI DIEM -->
+
                   <%if @Is_average_rate_int %>
                   <% for i in 1..@count do %>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
                   <%end%>
+                  <%=" (#{@average_rate} / 5)"%>
                   <%else%>
                   <% for i in 1..@count do %>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
                   <%end%>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-half.png"/>
+                  <%=" (#{@average_rate} / 5)"%>
                   <%end%>
-
                   <%else%>
-                  <h3>Chưa có lượt đánh giá nào</h3>
+                  <p>Chưa có lượt đánh giá nào</p>
                   <%end%>
-
+                </div>
               </p>
               </div>
             </div>

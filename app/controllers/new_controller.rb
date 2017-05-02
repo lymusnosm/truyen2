@@ -2,11 +2,12 @@ class NewController < ApplicationController
   def show
   @theloais=Theloai.all
   @truyens=Truyen.order("updated_at DESC")
+
+  # CODE LAY DU LIEU RATE TUNG TRUYEN ( CODE NAY DI KEM CODE TRONG view)
   @average_rate=0
-  @Is_average_rate_int=(@average_rate -@average_rate.to_i)>0?false : true
-  @count=@average_rate.to_i
-  if @Is_average_rate_int
-    @count=@average_rate
-  end
+  @rating_num=0
+  @Is_average_rate_int=true
+  @count=0
+
 end
 end
