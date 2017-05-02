@@ -59,8 +59,36 @@
               <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_en %></a></h1>
               <p><%= truncate t.content_en, length: 200 %></p>
             </div>
-            <div class="col-md-2"><p class="text-right"><p>Cập Nhật</p><%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%></p></div>
-          </div>
+            <div class="col-md-2">
+              <p class="text-right">
+                <p>Cập Nhật</p>
+                <%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%>
+
+
+                
+                <% if @rating_num != 0%>
+                  <%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%>
+
+                  <!--HIEN THI SAO TUONG UNG VOI DIEM -->
+                  
+                  <%if @Is_average_rate_int %>
+                  <% for i in 1..@count do %>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
+                  <%end%>
+                  <%else%>
+                  <% for i in 1..@count do %>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
+                  <%end%>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-half.png"/>
+                  <%end%>
+
+                  <%else%>
+                  <h3>Chưa có lượt đánh giá nào</h3>
+                  <%end%>
+
+              </p>
+              </div>
+            </div>
         </div>
       </div>
       <%end%>

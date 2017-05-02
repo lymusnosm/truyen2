@@ -22,6 +22,7 @@
 <body>
 
 <div class ="section">
+<%= @truyen.rate%>
     <!-- LOGO -->
     <div class="container">
       <div class="row">
@@ -86,6 +87,9 @@
                     <%= f.radio_button :rate ,"1",id: "star1" %><label class = "full" for="star1" title="Tồi Tệ - 1 star"></label>
                     <%= f.radio_button :rate ,"0.5",id: "starhalf"%><label class="half" for="starhalf" title="Như CC - 0.5 stars"></label>
                   </fieldset>
+                  <%= form_for (@truyen) do |f|%>
+                  <%= f.hidden_field :rate, :value => @average_rate %>
+                  <%end%>
                   <%= f.submit "Đánh Giá",class: "btn btn-default" %>
                   <%end%>
                 </div>
@@ -185,7 +189,7 @@
                   <h3><%=" #{@average_rate} / 5 trong tổng số #{@rating_num} lượt đánh giá"%></h3>
 
                   <!--HIEN THI SAO TUONG UNG VOI DIEM -->
-                  
+                
                   <%if @Is_average_rate_int %>
                   <% for i in 1..@count do %>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>

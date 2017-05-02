@@ -19,11 +19,13 @@ class TruyensController < ApplicationController
 
     @rating_num=@truyen.ratings.count
     @average_rate=@truyen.ratings.average(:rate)
-
+    
+    if @rating_num != 0
     @Is_average_rate_int=(@average_rate -@average_rate.to_i)>0?false : true
     @count=@average_rate.to_i
-    if @Is_average_rate_int
+      if @Is_average_rate_int
       @count=@average_rate
+      end
     end
 
   end
