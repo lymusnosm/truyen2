@@ -11,17 +11,11 @@ class TruyensController < ApplicationController
     if @truyen.ratings.exists?(:user_id => current_user.try(:id))
       @rated=true
       @user_rate= @truyen.ratings.find_by_user_id(current_user.id).rate
-      if @user_rate === nil
-        @rated=false
-        @rating_num=@rating_num -1
-      else
-      @rated=true
       @Is_user_rate_int=(@user_rate -@user_rate.to_i)>0?false : true
       @count1=@user_rate.to_i
       if @Is_user_rate_int
         @count1=@user_rate
        end
-     end
     end
 
 
