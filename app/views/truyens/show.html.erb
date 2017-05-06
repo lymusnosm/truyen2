@@ -85,7 +85,7 @@
                   <% for i in 1..@count do %>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
                   <%end%>
-                  <p class="text-white"><%=" (#{@truyen.finalrate.rate} / 5)"%></p>
+                  <p class="text-white"><%=" #{@truyen.finalrate.rate} / 5 trong tổng số #{@truyen.finalrate.number} lượt đánh giá"%></p>
                   <%else%>
                   <% for i in 1..@count do %>
                   <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
