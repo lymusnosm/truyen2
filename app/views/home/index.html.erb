@@ -95,7 +95,7 @@
           <div class="section">
             <div class="container">
               <div class="row">
-                <% @truyens[0,4].each do |t| %>
+                <% @truyenmoi[0,4].each do |t| %>
                 <div class="col-md-3">
                   <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
                   <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>
@@ -116,7 +116,7 @@
           <div class="section">
             <div class="container">
               <div class="row">
-                <% @truyens[4,4].each do |t| %>
+                <% @truyenmoi[4,4].each do |t| %>
                 <div class="col-md-3">
                   <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
                   <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>
@@ -133,7 +133,7 @@
           <div class="section">
             <div class="container">
               <div class="row">
-                <% @truyens[8,4].each do |t| %>
+                <% @truyenmoi[8,4].each do |t| %>
                 <div class="col-md-3">
                   <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
                   <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>

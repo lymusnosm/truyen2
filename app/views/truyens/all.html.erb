@@ -17,6 +17,7 @@
   ga('send', 'pageview');
 
   </script>
+
 </head>
 
 <body>
@@ -34,42 +35,77 @@
               </b>
             </h1>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <hr>
-            </div>
+	
+	<div class="row">
+          <div class="col-md-12">
+            <hr>
+            <h1 align="center">TẤT CẢ CÁC TRUYỆN</h1>
           </div>
         </div>
       </div>
+    </div>
+            
+  <% @truyens.each do |t|%>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><img src="<%=t.image%>"
+              class="img-responsive"></a>
+            </div>
+            <div class="col-md-3" align="justify">
+              <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_vn %></a></h1>
+              <p><%= truncate t.content_vn, length: 200 %></p>
+            </div>
+            <div class="col-md-3" align="justify">
+              <h1><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 400 %>"><%= t.name_en %></a></h1>
+              <p><%= truncate t.content_en, length: 200 %></p>
+            </div>
+            <div class="col-md-2">
+              <p align="center">
+                <p>Cập Nhật</p>
+                <p><%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%></p>
+              </p>
 
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3"><b>Tên tiếng Việt</b></div>
-            <div class="col-md-3"><b>Tên tiếng Anh</b></div>
-            <div class="col-md-3"><b>Thể loại</b></div>
-            <div class="col-md-3"><b>Thời gian cập nhật</b></div>
-            <div class="row">
-              <div class="col-md-12">
-                <hr>
+                <!-- CODE LAY DU LIEU RATE TUNG TRUYEN ( CODE NAY DI KEM CODE TRONG CONTROLLER)-->
+                <% @average_rate=t.ratings.average(:rate) %>
+                <% @rating_num=t.ratings.count %>
+                <% if @rating_num != 0 and @average_rate != nil %>
+                <% @Is_average_rate_int=(@average_rate -@average_rate.to_i)>0?false : true %>
+                <% @count=@average_rate.to_i %>
+                <% if @Is_average_rate_int %>
+                <% @count=@average_rate %>
+                <% end %>
+                <% end %>
+
+                <div class="row">
+                <br>
+                  <% if @rating_num != 0 %>
+
+                   <!--HIEN THI SAO TUONG UNG VOI DIEM -->
+
+                  <%if @Is_average_rate_int %>
+                  <% for i in 1..@count do %>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
+                  <%end%>
+                  <%=" (#{@average_rate} / 5)"%>
+                  <%else%>
+                  <% for i in 1..@count do %>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-on.png"/>
+                  <%end%>
+                  <img src="https://raw.githubusercontent.com/wazery/ratyrate/master/lib/generators/ratyrate/templates/star-half.png"/>
+                  <%=" (#{@average_rate} / 5)"%>
+                  <%end%>
+                  <%else%>
+                  <p>Chưa có lượt đánh giá nào</p>
+                  <%end%>
+                </div>
+              </p>
               </div>
             </div>
-          </div>
-
-        </div>
-        <div class="section">
-          <div class="container">
-            <% @truyens.each do |t|%>
-            <div class="row">
-              <div class="col-md-3"><a href="<%=truyen_path(t)%>"><%= t.name_vn%></a></div>
-              <div class="col-md-3"><a href="<%=truyen_path(t)%>"><%= t.name_en%></a></div>
-              <div class="col-md-3"><%= t.theloai.title%></div>
-              <div class="col-md-3"><%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%></div>
-            </div>
-            <%end%>
-          </div>
         </div>
       </div>
+      <%end%>
 
       <div class="container">
         <div class="row">
@@ -79,6 +115,55 @@
           <p>FAM-Truyện Song Ngữ</p>
         </div>
       </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">FAM</h1>
+            <p class="text-center">We are a group of University of Engineering and Technology
+              <br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+            class="img-circle img-responsive">
+          </div>
+          <div class="col-md-2">
+            <h3 class="text-left">Ngô Hải Yến</h3>
+            <p class="text-left">K60-CD</p>
+          </div>
+          <div class="col-md-1">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+            class="img-circle img-responsive">
+          </div>
+          <div class="col-md-2">
+            <h3 class="text-left">Bùi Diệu Linh</h3>
+            <p class="text-left">K60-CB</p>
+          </div>
+          <div class="col-md-1">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+            class="img-circle img-responsive">
+          </div>
+          <div class="col-md-2">
+            <h3 class="text-left">Đinh Khắc Quý</h3>
+            <p class="text-left">K60-CAC
+              <br>
+            </p>
+          </div>
+          <div class="col-md-1">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+            class="img-circle img-responsive">
+          </div>
+          <div class="col-md-2">
+            <h3 class="text-left">Vũ Hoàng Long</h3>
+            <p class="text-left">K60-CAC</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </div>
   </body>
