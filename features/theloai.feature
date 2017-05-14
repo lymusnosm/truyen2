@@ -1,4 +1,4 @@
-Feature: Truyen ngan
+Feature: The loai
   In order to read a story
   As a user
   I want to select a story
@@ -9,23 +9,23 @@ Feature: Truyen ngan
     Then I should see content of "CÒN THƯƠNG"
 
   Scenario: Select a vietnamese story name
-    Given I am on "Truyện ngụ ngôn" page
+    Given I am on "Truyện cổ tích" page
     When I click "KHÔNG BAO GIỜ BỎ CUỘC"
     Then I should see content of "KHÔNG BAO GIỜ BỎ CUỘC"
 
 
   Scenario: Select a vietnamese story name
-    Given I am on "Truyện cổ tích" page
+    Given I am on "Truyện ngụ ngôn" page
     When I click "Con nai ngu ngốc"
     Then I should see content of "Con nai ngu ngốc"
 
-#  Scenario: Select a english story name
-#    Given I am on "Truyện cổ tích" page
-#    When I click "Con nai ngu ngốc"
-#    Then I should see content of "Con nai ngu ngốc"
-
   Scenario: Select a english story name
     Given I am on "Truyện ngụ ngôn" page
+    When I click "Con nai ngu ngốc"
+    Then I should see content of "THE FOOLISH DEER"
+
+  Scenario: Select a english story name
+    Given I am on "Truyện cổ tích" page
     When I click "NEVER GIVE UP"
     Then I should see content of "NEVER GIVE UP"
 

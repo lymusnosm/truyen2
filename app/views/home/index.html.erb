@@ -6,15 +6,22 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
-  rel="stylesheet" type="text/css">
+        rel="stylesheet" type="text/css">
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function () {
+                  (i[r].q = i[r].q || []).push(arguments)
+              }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-97841360-1', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-97841360-1', 'auto');
+      ga('send', 'pageview');
 
   </script>
 
@@ -22,194 +29,197 @@
 
 <body>
 
-  <div class="section">
+<div class="section">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h1 class="text-left">
-            <i class="fa fa-3x fa-fw fa-book"></i>
-            <b>
-              <i class="">Truyện Song Ngữ Anh-Việt</i>
-            </b>
-          </h1>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="text-left">
+          <i class="fa fa-3x fa-fw fa-book"></i>
+          <b>
+            <i class="">Truyện Song Ngữ Anh-Việt</i>
+          </b>
+        </h1>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-6">
-            <h1>Truyện song ngữ</h1>
-            <h3 class="lead ">Đọc sách ^^!</h3>
-            <p class=" lead ">Đọc sách mang lại cho ta rất nhiều tri thức mới, đưa ta đến với văn hóa
-              từ các nơi trên thế giới, nhưng kiến thức uyên sâu mà ông cha ta đã để
-              lại, nhưng vẻ &nbsp;đẹp kì vĩ của thiên nhiên, ... &nbsp;
-              <br>
-              <br>Không&nbsp;chỉ mang đến lợi ích từ việc đọc sách, việc đọc sách song ngữ
-              có thể giúp trau dồi thêm khả năng về ngôn ngữ của nước ngoài, lại mở rộng
-              hơn về văn hóa và lỗi sống của họ.&nbsp;
-              <br>
-              <br>Với mục&nbsp;đích đó, những mẩu truyện được sưu tầm &nbsp;giúp chúng ta
-              có thể vừa tiếp thu thêm kiến thức, vừa trau dồi vốn từ vựng và ngữ pháp,
-              lại vừa có thể thư giãn sau một ngày làm việc căng thẳng&nbsp;
-              <br>
-              <br>Nào chúng ta cùng đọc sách nào!</p>
-            </div>
-            <div class="col-md-6">
-              <img src="http://cdn.hercampus.com/s3fs-public/2016/12/12/books_0.jpg"
-              class="img-responsive">
-              <div class="section">
-                <ol>
-                  <% @theloais.each do |t| %>
-                  <li><a href="<%= theloai_path(t) %>"><%= t.title%></a></li>
-                  <%end%>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <hr>
-            <p class="lead">Mới cập nhật</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="fullcarousel-example" data-interval="2000" class="carousel slide"
-      data-ride="carousel">
-      <div class="carousel-inner">
-
-        <div class="item active">
-          <div class="section">
-            <div class="container">
-              <div class="row">
-                <% @truyenmoi[0,4].each do |t| %>
-                <div class="col-md-3">
-                  <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
-                  <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>
-                  <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
-                  <%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%>
-
-                  
-                
-
-                </div>
-                <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="section">
-            <div class="container">
-              <div class="row">
-                <% @truyenmoi[4,4].each do |t| %>
-                <div class="col-md-3">
-                  <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
-                  <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>
-                  <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
-                  <%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%>
-                </div>
-                <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="section">
-            <div class="container">
-              <div class="row">
-                <% @truyenmoi[8,4].each do |t| %>
-                <div class="col-md-3">
-                  <a href="<%= truyen_path(t)%>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image%>" class="img-responsive"></a>
-                  <h2><a href="<%=truyen_path(t)%>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a></h2>
-                  <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
-                  <%="#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago"%>
-                </div>
-                <%end%>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <a class="left carousel-control" href="#fullcarousel-example" data-slide="prev"><i class="fa fa-arrow-left fa-fw fa-lg icon-prev"></i></a>
-      <a class="right carousel-control" href="#fullcarousel-example" data-slide="next"><i class="fa fa-arrow-right fa-fw fa-lg icon-next"></i></a>
-
-    </div>
-
-    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <hr>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="text-center">FAM</h1>
-            <p class="text-center">We are a group of University of Engineering and Technology
-              <br>
-            </p>
-          </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          <h1>Truyện song ngữ</h1>
+          <h3 class="lead ">Đọc sách ^^!</h3>
+          <p class=" lead ">Đọc sách mang lại cho ta rất nhiều tri thức mới, đưa ta đến với văn hóa
+            từ các nơi trên thế giới, nhưng kiến thức uyên sâu mà ông cha ta đã để
+            lại, nhưng vẻ &nbsp;đẹp kì vĩ của thiên nhiên, ... &nbsp;
+            <br>
+            <br>Không&nbsp;chỉ mang đến lợi ích từ việc đọc sách, việc đọc sách song ngữ
+            có thể giúp trau dồi thêm khả năng về ngôn ngữ của nước ngoài, lại mở rộng
+            hơn về văn hóa và lỗi sống của họ.&nbsp;
+            <br>
+            <br>Với mục&nbsp;đích đó, những mẩu truyện được sưu tầm &nbsp;giúp chúng ta
+            có thể vừa tiếp thu thêm kiến thức, vừa trau dồi vốn từ vựng và ngữ pháp,
+            lại vừa có thể thư giãn sau một ngày làm việc căng thẳng&nbsp;
+            <br>
+            <br>Nào chúng ta cùng đọc sách nào!</p>
         </div>
-        <div class="row">
-          <div class="col-md-1">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
-            class="img-circle img-responsive">
-          </div>
-          <div class="col-md-2">
-            <h3 class="text-left">Ngô Hải Yến</h3>
-            <p class="text-left">K60-CD</p>
-          </div>
-          <div class="col-md-1">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
-            class="img-circle img-responsive">
-          </div>
-          <div class="col-md-2">
-            <h3 class="text-left">Bùi Diệu Linh</h3>
-            <p class="text-left">K60-CB</p>
-          </div>
-          <div class="col-md-1">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
-            class="img-circle img-responsive">
-          </div>
-          <div class="col-md-2">
-            <h3 class="text-left">Đinh Khắc Quý</h3>
-            <p class="text-left">K60-CAC
-              <br>
-            </p>
-          </div>
-          <div class="col-md-1">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
-            class="img-circle img-responsive">
-          </div>
-          <div class="col-md-2">
-            <h3 class="text-left">Vũ Hoàng Long</h3>
-            <p class="text-left">K60-CAC</p>
+
+        <div class="col-md-6">
+          <img src="http://cdn.hercampus.com/s3fs-public/2016/12/12/books_0.jpg"
+               class="img-responsive">
+          <div class="section">
+            <ol>
+              <% @theloais.each do |t| %>
+                  <li><a href="<%= theloai_path(t) %>"><%= t.title %></a></li>
+              <% end %>
+            </ol>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <p class="lead">Mới cập nhật</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="fullcarousel-example" data-interval="2000" class="carousel slide"
+       data-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <div class="section">
+          <div class="container">
+            <div class="row">
+              <% @truyenmoi[0, 4].each do |t| %>
+                  <div class="col-md-3">
+                    <a href="<%= truyen_path(t) %>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image %>" class="img-responsive"></a>
+                    <h2>
+                      <a href="<%= truyen_path(t) %>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a>
+                    </h2>
+                    <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
+                    <%= "#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago" %>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section">
+          <div class="container">
+            <div class="row">
+              <% @truyenmoi[4, 4].each do |t| %>
+                  <div class="col-md-3">
+                    <a href="<%= truyen_path(t) %>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image %>" class="img-responsive"></a>
+                    <h2>
+                      <a href="<%= truyen_path(t) %>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a>
+                    </h2>
+                    <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
+                    <%= "#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago" %>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="section">
+          <div class="container">
+            <div class="row">
+              <% @truyenmoi[8, 4].each do |t| %>
+                  <div class="col-md-3">
+                    <a href="<%= truyen_path(t) %>" style="opacity: 1;" title="<%= truncate t.content_vn, length: 300 %>"><img src="<%= t.image %>" class="img-responsive"></a>
+                    <h2>
+                      <a href="<%= truyen_path(t) %>" title="<%= truncate t.content_vn, length: 300 %>"><%= truncate t.name_vn, length: 30 %></a>
+                    </h2>
+                    <p class="lead"><%= truncate t.content_vn, length: 40 %></p>
+                    <%= "#{time_ago_in_words(t.updated_at.in_time_zone(7))} ago" %>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="left carousel-control" href="#fullcarousel-example" data-slide="prev"><i class="fa fa-arrow-left fa-fw fa-lg icon-prev"></i></a>
+    <a class="right carousel-control" href="#fullcarousel-example" data-slide="next"><i class="fa fa-arrow-right fa-fw fa-lg icon-next"></i></a>
 
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">FAM</h1>
+          <p class="text-center">We are a group of University of Engineering and Technology
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+          <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+               class="img-circle img-responsive">
+        </div>
+        <div class="col-md-2">
+          <h3 class="text-left">Ngô Hải Yến</h3>
+          <p class="text-left">K60-CD</p>
+        </div>
+        <div class="col-md-1">
+          <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+               class="img-circle img-responsive">
+        </div>
+        <div class="col-md-2">
+          <h3 class="text-left">Bùi Diệu Linh</h3>
+          <p class="text-left">K60-CB</p>
+        </div>
+        <div class="col-md-1">
+          <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+               class="img-circle img-responsive">
+        </div>
+        <div class="col-md-2">
+          <h3 class="text-left">Đinh Khắc Quý</h3>
+          <p class="text-left">K60-CAC
+            <br>
+          </p>
+        </div>
+        <div class="col-md-1">
+          <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+               class="img-circle img-responsive">
+        </div>
+        <div class="col-md-2">
+          <h3 class="text-left">Vũ Hoàng Long</h3>
+          <p class="text-left">K60-CAC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
