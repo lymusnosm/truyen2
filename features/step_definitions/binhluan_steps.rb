@@ -1,5 +1,5 @@
 Given(/^I am on content page of "([^"]*)"$/) do |arg|
-  page.should have_content(arg)
+  visit truyen_path(10)
 end
 
 
