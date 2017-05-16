@@ -14,3 +14,8 @@ end
 # And(/^I was not logged in$/) do
 #   isLoggedIn = false
 # end
+
+
+Then(/^I should see "([^"]*)" comment$/) do |arg|
+  
+end
