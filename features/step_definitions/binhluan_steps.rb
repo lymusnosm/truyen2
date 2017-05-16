@@ -1,5 +1,5 @@
 Given(/^I am on content page of "([^"]*)"$/) do |arg|
-  page.should have_content(arg)
+  visit truyen_path(10)
 end
 
 
@@ -8,23 +8,19 @@ Then(/^I should be on login page$/) do
 end
 
 And(/^I was logged in$/) do
-  if current_user
-    return true
-  end
+  isLoggedIn = true
 end
 
 And(/^I was not logged in$/) do
-  if !current_user
-    return true
-  end
+  isLoggedIn = false
 end
 
 Then(/^I should see "([^"]*)" button$/) do |arg|
-  page.should show(arg)
+  page.should have_content(arg)
 end
 
 Then(/^I should see a notice request login$/) do
-
+  
 end
 
 Then(/^I should see "([^"]*)" comment$/) do |arg|
