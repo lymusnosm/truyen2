@@ -45,7 +45,7 @@ Feature: Navigation
 
   Scenario: Go to "Truyện Cổ Tích"
     When I click "Thể Loại"
-    And I click "Truyện Cổ Tich"
+    And I click "Truyện Cổ Tích"
     Then I should be on "Truyện Cổ Tích" page
     And I should see "Truyện Cổ Tich" page
 
