@@ -47,7 +47,7 @@ Feature: Navigation
     When I click "Thể Loại"
     And I click "Truyện Cổ Tich"
     Then I should be on "Truyện Cổ Tích" page
-    And I should see "Truyện Cổ Tích" page
+    And I should see "Truyện Cổ Tich" page
 
   Scenario: Login
     When I click "Đăng Nhập" button
@@ -57,7 +57,7 @@ Feature: Navigation
     When I fill in search box with "Còn Thương"
     And I click "Tìm Truyện" button
     Then I should be on search page
-    And I should see "CÒN THƯƠNG" story's infomation
+    And I should see "Còn thương" story's infomation
 
 
 
