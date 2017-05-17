@@ -7,6 +7,18 @@ Then(/^I should be on login page$/) do
   visit login_path
 end
 
+# And(/^I was logged in$/) do
+#   isLoggedIn = true
+# end
+#
+# And(/^I was not logged in$/) do
+#   isLoggedIn = false
+# end
+
+
+Then(/^I should see "([^"]*)" comment$/) do |arg|
+  
+end
 And(/^I was logged in$/) do
   isLoggedIn = true
 end

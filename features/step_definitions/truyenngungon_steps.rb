@@ -1,3 +1,8 @@
+
+Given(/^I am on "Truyện Ngụ Ngôn" page$/) do
+  
+end
+
 Given(/^I should see list stories$/) do
   
 end
