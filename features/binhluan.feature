@@ -5,7 +5,7 @@ Feature: Binh luan
 
   Scenario: Comment on a story
     Given I am on content page of "KHÔNG BAO GIỜ BỎ CUỘC"
-    When I fill in "bình luận" with "Good"
+    When I fill in "Bình luận" with "Good"
     And I click "Post"
     Then I should see "Good" comment
 

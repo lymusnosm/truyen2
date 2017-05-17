@@ -5,13 +5,13 @@ Feature: The loai
 
   Scenario: Select a vietnamese story name
     Given I am on "Truyện ngắn" page
-    When I click "CÒN THƯƠNG"
-    Then I should see content of "CÒN THƯƠNG"
+    When I click "Còn thương"
+    Then I should see content of "Còn thương"
 
   Scenario: Select a vietnamese story name
     Given I am on "Truyện cổ tích" page
-    When I click "KHÔNG BAO GIỜ BỎ CUỘC"
-    Then I should see content of "KHÔNG BAO GIỜ BỎ CUỘC"
+    When I click "Không bao giờ bỏ cuộc"
+    Then I should see content of "Không bao giờ bỏ cuộc"
 
 
   Scenario: Select a vietnamese story name
@@ -26,13 +26,13 @@ Feature: The loai
 
   Scenario: Select a english story name
     Given I am on "Truyện cổ tích" page
-    When I click "NEVER GIVE UP"
-    Then I should see content of "NEVER GIVE UP"
+    When I click "Never give up"
+    Then I should see content of "Never give up"
 
   Scenario: Select a english story name
     Given I am on "Truyện ngắn" page
-    When I click "STILL LOVING"
-    Then I should see content of "STILL LOVING"
+    When I click "Still loving"
+    Then I should see content of "Still loving"
 
 
 
