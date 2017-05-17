@@ -27,9 +27,9 @@ Then(/^I can see "([^"]*)"$/) do |arg1|
   page.should have_content(arg1)
 end
 
-Then(/^I should be on "Truyện mới cập nhật" page$/) do
-  current_path.should == new_path
-end
+# Then(/^I should be on "Truyện mới cập nhật" page$/) do
+#   current_path.should == new_path
+# end
 
 And(/^I should see "([^"]*)" on the navigation$/) do |arg|
 
@@ -49,7 +49,7 @@ And(/^I should see search box$/) do
 end
 
 And(/^I should see "([^"]*)" page$/) do |arg|
-
+  page.should have_content(arg)
 end
 
 
@@ -70,5 +70,5 @@ Then(/^I should be on search page$/) do
 end
 
 And(/^I should see "([^"]*)" story's infomation$/) do |arg|
-
+page.should have_content(arg)
 end

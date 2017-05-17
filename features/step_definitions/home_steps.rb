@@ -55,5 +55,10 @@ Then(/^I should see "([^"]*)" change color$/) do |arg|
 end
 
 Then(/^I should be on "([^"]*)" page$/) do |arg|
-
+  if arg == "Truyện ngắn"
+    current_path == theloai_path(1)
+  elsif arg == "Truyện ngụ ngôn"
+    current_path == theloai_path(2)
+    else current_path == theloai_path(3)
+  end
 end

@@ -11,25 +11,25 @@ Feature: Home
     And I should see a picture
     And I should see all kind of stories
 
-    Scenario: Stories in home page
-      Given I am on home page
-      When I scroll home page
-      Then I should see the new stories
-      And I should see the pictures of the stories
-      And I should see FAM team's information
+  Scenario: Stories in home page
+    Given I am on home page
+    When I scroll home page
+    Then I should see the new stories
+    And I should see the pictures of the stories
+    And I should see FAM team's information
 
-      Scenario: View the stories
-        Given I am on home page
-        When I click arrow left
-        Then I should see the stories move from right to left
-        When I click arrow right
-        Then I should see the stories move from left to right
+  Scenario: View the stories
+    Given I am on home page
+    When I click arrow left
+    Then I should see the stories move from right to left
+    When I click arrow right
+    Then I should see the stories move from left to right
 
-        Scenario: Move mouse to "1. Truyện Ngắn"
-          Given I am on home page
-          When I move mouse on the "1. Truyện Ngắn"
-          Then I should see "1. Truyện Ngắn" change color
-          And I should see "1. Truyện Ngắn" underlined
+  Scenario: Move mouse to "1. Truyện Ngắn"
+    Given I am on home page
+    When I move mouse on the "1. Truyện Ngắn"
+    Then I should see "1. Truyện Ngắn" change color
+    And I should see "1. Truyện Ngắn" underlined
 
   Scenario: Move mouse to "2. Truyện Ngụ Ngôn"
     Given I am on home page
@@ -43,17 +43,17 @@ Feature: Home
     Then I should see "3. Truyện Cổ Tích" change color
     And I should see "3. Truyện Cổ Tích" underlined
 
-    Scenario: Select "Truyện Ngắn"
-      Given I am on home page
-      When I click on the "1. Truyện Ngắn"
-      Then I should be on "Truyện Ngắn" page
+  Scenario: Select "Truyện Ngắn"
+    Given I am on home page
+    When I click on the "1. Truyện Ngắn"
+    Then I should be on "Truyện Ngắn" page
 
   Scenario: Select "Truyện Ngụ Ngôn"
     Given I am on home page
     When I click on the "2. Truyện Ngụ Ngôn"
     Then I should be on "Truyện Ngụ Ngôn" page
 
-  Scenario: Select "Truyện Ngắn"
+  Scenario: Select "Truyện Cổ Tích"
     Given I am on home page
     When I click on the "3. Truyện Cổ Tích"
     Then I should be on "Truyện Cổ Tích" page
