@@ -31,7 +31,6 @@ Then(/^I should be on "Truyện mới cập nhật" page$/) do
   current_path.should == new_path
 end
 
-
 And(/^I should see "([^"]*)" on the navigation$/) do |arg|
 
 end

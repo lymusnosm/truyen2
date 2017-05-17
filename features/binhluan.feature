@@ -7,6 +7,9 @@ Feature: Binh luan
     Given I am on content page of "KHÔNG BAO GIỜ BỎ CUỘC"
     When I fill in "Bình luận" with "Good"
     And I click "Post"
+    And I was logged in
+    When I fill in "content" with "Good"
+    And I click "Gửi"
     Then I should see "Good" comment
 
 #  Scenario: Comment on a story while not logged in
