@@ -16,9 +16,9 @@ end
 # end
 
 
-Then(/^I should see "([^"]*)" comment$/) do |arg|
-  
-end
+# Then(/^I should see "([^"]*)" comment$/) do |arg|
+#
+# end
 And(/^I was logged in$/) do
   isLoggedIn = true
 end

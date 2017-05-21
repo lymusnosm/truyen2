@@ -19,7 +19,7 @@ Feature: Truyen Ngu Ngon
 
   Scenario: Click on a name story
     Given I on "Con nai ngu ngốc" story
-    When I click on the "Con nai ngu ngốc"
+    When I click "Con nai ngu ngốc"
     Then I should on "Con nai ngu ngốc" story's content page
 
   Scenario: Click on a picture of a story

@@ -19,7 +19,7 @@ Feature: Truyen Ngan
 
   Scenario: Click on a name story
     Given I on "Còn thương" story
-    When I click on the "Còn thương"
+    When I click "Còn thương"
     Then I should on "Còn thương" story's content page
 
   Scenario: Click on a picture of a story

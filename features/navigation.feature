@@ -47,7 +47,7 @@ Feature: Navigation
     When I click "Thể Loại"
     And I click "Truyện Cổ Tích"
     Then I should be on "Truyện Cổ Tích" page
-    And I should see "Truyện Cổ Tich" page
+    And I should see "Truyện Cổ Tích" page
 
   Scenario: Login
     When I click "Đăng Nhập" button
