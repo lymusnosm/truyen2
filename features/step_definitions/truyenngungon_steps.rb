@@ -43,7 +43,7 @@ When(/^I click on the "([^"]*)"$/) do |arg1|
     arg1 = "Truyện Ngụ Ngôn"
     click_on(arg1, match: :first)
   elsif arg1 == "3. Truyện Cổ Tích"
-    arg1 = "Truyện Cổ Tich"
+    arg1 = "Truyện Cổ Tích"
     click_on(arg1, match: :first)
   else
     click_on(arg1, match: :first)

@@ -46,16 +46,14 @@ ActiveRecord::Schema.define(version: 20170506005823) do
   end
 
   create_table "truyens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
-    t.text     "name_vn",     limit: 65535
-    t.text     "name_en",     limit: 65535
-    t.text     "content_vn",  limit: 65535
-    t.text     "content_en",  limit: 65535
+    t.text     "name_vn",    limit: 65535
+    t.text     "name_en",    limit: 65535
+    t.text     "content_vn", limit: 65535
+    t.text     "content_en", limit: 65535
     t.string   "image"
     t.integer  "theloai_id"
-    t.float    "rate",        limit: 24,    null: false
-    t.integer  "rate_number",               null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.index ["theloai_id"], name: "index_truyens_on_theloai_id", using: :btree
   end
 
