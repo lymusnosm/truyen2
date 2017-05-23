@@ -18,10 +18,12 @@
   ga('send', 'pageview');
   </script>
 
-p {
-    text-indent: 30px;
+<style type="text/css">
+  .image{
+    background-image: url('/assets/images/book.png');
+  }
+</style>
 
-}
 </head>
 
 <body>
@@ -214,6 +216,9 @@ p {
 
       <div class="container">
         <div class="row">
+          <div class="image">
+
+
           <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_vn%></h1></div>
           <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_en%></h1></div>
         </div>
@@ -223,6 +228,8 @@ p {
           <div class="col-md-6"><div class="section"><b class="lead" align = "justify"><%= simple_format(@truyen.content_en)%></b></div></div>
         </div>
       </div>
+
+     </div>
 
 
       <div class="container">
@@ -271,6 +278,9 @@ p {
         </div>
       </div>
 
+<div class="image">
+</div>
+
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -279,8 +289,6 @@ p {
           <p>FAM-Truyện Song Ngữ</p>
         </div>
       </div>
-
-
 
     </div>
   </div>

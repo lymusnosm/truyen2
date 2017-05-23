@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/xoatheloai/:id/' =>'theloais#destroy' ,as: :xoatheloai
   get '/edit' =>'edittruyens#list'
   get '/admin' =>'admin#show'
+  get '/user' => 'admin#user'
   patch '/truyen/:id' => 'edittruyens#update'
   resources :truyen
   get '/xoatruyen/:id/' =>'edittruyens#destroy' ,as: :xoatruyen
