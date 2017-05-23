@@ -22,3 +22,35 @@ end
 When(/^I click sort button$/) do
 
 end
+
+When(/^I select "([^"]*)"$/) do |arg1|
+  
+end
+
+Then(/^I should see the newest comments$/) do
+  
+end
+
+Then(/^I should see the oldest comments$/) do
+  
+end
+
+When(/^I click comment session$/) do
+  
+end
+
+Then(/^I should see my avatar facebook$/) do
+  
+end
+
+Then(/^I should see "([^"]*)" checkbox$/) do |arg1|
+  
+end
+
+When(/^I fill in comment session with some word$/) do
+  
+end
+
+Then(/^I should see my comment on "([^"]*)" page$/) do |arg1|
+  
+end
