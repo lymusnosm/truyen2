@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/uptruyen' =>'edittruyens#new'
 
+
   post 'truyens' =>'edittruyens#create'
   get '/themtheloai' =>'theloais#new'
   resources :theloais
