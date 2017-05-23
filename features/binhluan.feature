@@ -5,12 +5,11 @@ Feature: Binh luan
 
   Scenario: Comment on a story
     Given I am on content page of "KHÔNG BAO GIỜ BỎ CUỘC"
-    When I fill in "Bình luận" with "Good"
-    And I click "Post"
-    And I was logged in
-    When I fill in "content" with "Good"
+#    When I fill in "Bình luận" with "hello"
+#    And I click "Post"
+    When I fill in "comments" with "hello"
     And I click "Gửi"
-    Then I should see "Good" comment
+    Then I should see "hello" comment
 
 #  Scenario: Comment on a story while not logged in
 #    Given I am on content page of "KHÔNG BAO GIỜ BỎ CUỘC"

@@ -1,6 +1,6 @@
 Feature: The story
   In order to read a story
-  As a user
+  As an user
   I want to read and comment a story
 
   Scenario: View "Con nai ngu ngốc" page
