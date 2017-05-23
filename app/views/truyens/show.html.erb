@@ -22,6 +22,10 @@
   .image{
     background-image: url('/assets/images/book.png');
   }
+
+  .le{
+    text-indent: 30px;
+  }
 </style>
 
 </head>
@@ -224,8 +228,8 @@
         </div>
         <br>
         <div class="row">
-          <div class="col-md-6"><div class="section"><b class="lead" align = "justify"><%= simple_format(@truyen.content_vn)%></b></div></div>
-          <div class="col-md-6"><div class="section"><b class="lead" align = "justify"><%= simple_format(@truyen.content_en)%></b></div></div>
+          <div class="col-md-6"><div class="section"><b class="lead le" align = "justify"><%= simple_format(@truyen.content_vn)%></b></div></div>
+          <div class="col-md-6"><div class="section"><b class="lead le" align = "justify"><%= simple_format(@truyen.content_en)%></b></div></div>
         </div>
       </div>
 
