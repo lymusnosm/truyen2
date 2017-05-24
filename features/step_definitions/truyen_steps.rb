@@ -10,6 +10,9 @@ And(/^I should see "([^"]*)" story's content in English$/) do |arg|
   visit truyen_path(7)
 end
 
+Given(/^I am on "([^"]*)" story$/) do |arg1|
+
+end
 
 And(/^I should see comment session$/) do
 
@@ -54,3 +57,8 @@ end
 Then(/^I should see my comment on "([^"]*)" page$/) do |arg1|
   
 end
+
+Then(/^I should see picture of "([^"]*)" story$/) do |arg1|
+
+end
+

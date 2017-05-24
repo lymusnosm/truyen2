@@ -3,27 +3,24 @@ Feature: Truyen Ngan
   As a user
   I want to select a story in the list stories
 
-  Background:
-    Given I am on "Truyện Ngắn" page
-    And I should see list stories
-
   Scenario: Move mouse on a name story
-    Given I move the mouse on "Còn thương" story
+    Given I am on "Truyện Ngắn" page
+    Then I should see "Tôi đến thăm ông Hoành."    
+    When I move the mouse on "Còn thương" story
     Then I should see "Còn thương" story's color change
     And I should see "Còn thương" underlined
-    And I should see a part of "Còn thương" story content
+    And I should see "Tôi đến thăm ông Hoành."
 
   Scenario: Move mouse on a picture of a story
-    Given I on picture of "Còn thương" story
-    Then I should see a part of "Còn thương" story's content
-
-  Scenario: Click on a name story
-    Given I on "Còn thương" story
+    Given I am on "Truyện Ngắn" page
+    Then I should see "Còn thương"
+    And I should see "Tôi đến thăm ông Hoành."
     When I click "Còn thương"
     Then I should on "Còn thương" story's content page
 
   Scenario: Click on a picture of a story
-    Given I on picture of "Còn thương" story
+    Given I am on "Truyện Ngắn" page
+    Then I should see picture of "Còn thương" story
     When I click on picture of "Còn thương" story
     Then I should on "Còn thương" story's content page
 
