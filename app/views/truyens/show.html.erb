@@ -19,10 +19,6 @@
   </script>
 
 <style type="text/css">
-  .image{
-    background-image: url('/assets/images/book.png');
-  }
-
   .le{
     text-indent: 30px;
   }
@@ -217,12 +213,8 @@
     </div>
 
     <div class="section">
-
       <div class="container">
         <div class="row">
-          <div class="image">
-
-
           <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_vn%></h1></div>
           <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_en%></h1></div>
         </div>
@@ -232,8 +224,7 @@
           <div class="col-md-6"><div class="section"><b class="lead le" align = "justify"><%= simple_format(@truyen.content_en)%></b></div></div>
         </div>
       </div>
-
-     </div>
+    </div>
 
 
       <div class="container">
@@ -281,9 +272,6 @@
           <% end %>
         </div>
       </div>
-
-<div class="image">
-</div>
 
       <div class="container">
         <div class="row">
