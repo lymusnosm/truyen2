@@ -2,7 +2,6 @@ Feature: Truyện ngắn
   In order to read a story
   As an user
   I want to select a story in the list stories
-
   Background:
     Given I am on "Truyện ngắn" page
     And I should see list stories

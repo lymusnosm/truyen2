@@ -29,13 +29,31 @@
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: Verdana;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+p,h1,h2,h3,h4,h5,h6,a,i {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+.image{
+    background-image: url(background.png);
+}
+
+.le{
+    text-indent: 30px;
+}
+
 article,
 aside,
 details,
@@ -84,7 +102,6 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
 }
 mark {
@@ -1101,7 +1118,6 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Pontano Sans;
   font-size: 14px;
   line-height: 1.42857143;
   color: #ffffff;
@@ -1128,9 +1144,6 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-}
-figure {
-  margin: 0;
 }
 img {
   vertical-align: middle;
@@ -1203,7 +1216,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: Montserrat;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;

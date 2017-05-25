@@ -1,9 +1,9 @@
 Given(/^I am on "([^"]*)" page$/) do |arg|
-  if arg == "Truyện ngắn"
+  if arg == "Truyện Ngắn"
     visit theloai_path(1)
-  elsif arg == "Truyện ngụ ngôn"
+  elsif arg == "Truyện Ngụ Ngôn"
     visit theloai_path(2)
-  else
+  elsif arg == "Truyện Cổ Tích"
     visit theloai_path(3)
   end
 end
