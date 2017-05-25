@@ -1,5 +1,5 @@
 Feature: dangnhap
-  In order to do sign in
+  In order to ensure the safety of personal information
   As an user
   I want to sign in
 

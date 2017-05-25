@@ -1,6 +1,6 @@
 Feature: Home
-  In order to find a story
-  As a user
+  In order to read a story
+  As an user
   I want to select a story
 
   Scenario: Introduce about "Truyện Song Ngữ"

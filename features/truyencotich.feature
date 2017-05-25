@@ -1,6 +1,6 @@
 Feature: Truyen Co Tich
   In order to read a story
-  As a user
+  As an user
   I want to select a story in the list stories
 
   Background:

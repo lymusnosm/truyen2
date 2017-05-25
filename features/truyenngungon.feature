@@ -1,10 +1,10 @@
-Feature: Truyen Ngu Ngon
+Feature: Truyện ngụ ngôn
   In order to read a story
-  As a user
+  As an user
   I want to select a story in the list stories
 
   Background:
-    Given I am on "Truyện Ngụ Ngôn" page
+    Given I am on "Truyện ngụ ngôn" page
     And I should see list stories
 
   Scenario: Move mouse on a name story
@@ -19,13 +19,10 @@ Feature: Truyen Ngu Ngon
 
   Scenario: Click on a name story
     Given I on "Con nai ngu ngốc" story
-    When I click "Con nai ngu ngốc"
+    When I click on the "Con nai ngu ngốc"
     Then I should on "Con nai ngu ngốc" story's content page
 
   Scenario: Click on a picture of a story
     Given I on picture of "Con nai ngu ngốc" story
     When I click on picture of "Con nai ngu ngốc" story
     Then I should on "Con nai ngu ngốc" story's content page
-
-
-
