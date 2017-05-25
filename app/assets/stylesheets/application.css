@@ -50,6 +50,10 @@ h1 {
     background-image: url(background.png);
 }
 
+.le{
+    text-indent: 30px;
+}
+
 article,
 aside,
 details,
@@ -1140,9 +1144,6 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-}
-figure {
-  margin: 0;
 }
 img {
   vertical-align: middle;

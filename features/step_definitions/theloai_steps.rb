@@ -12,3 +12,5 @@ end
 Then(/^I should see content of "([^"]*)"$/) do |arg|
   page.should have_content(arg)
 end
+
+

@@ -18,12 +18,6 @@
   ga('send', 'pageview');
   </script>
 
-<style type="text/css">
-  .le{
-    text-indent: 30px;
-  }
-</style>
-
 </head>
 
 <body>
@@ -212,16 +206,16 @@
       </div>
     </div>
 
-    <div class="section image">
+    <div class="section image text-primary">
       <div class="container">
         <div class="row">
-          <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_vn%></h1></div>
-          <div class="col-md-6"><h1 class="text-center"><%=@truyen.name_en%></h1></div>
+          <div class="col-md-6 text-center"><h2><%=@truyen.name_vn%></h2></div>
+          <div class="col-md-6 text-center"><h2><%=@truyen.name_en%></h2></div>
         </div>
         <br>
         <div class="row">
           <div class="col-md-6"><div class="section"><b class="lead le" align = "justify"><%= simple_format(@truyen.content_vn)%></b></div></div>
-          <div class="col-md-6"><div class="section"><b class="lead le" align = "justify"><%= simple_format(@truyen.content_en)%></b></div></div>
+          <div class="col-md-6"><div class="section"><b class="lead le" align = "justify" leftmargin="50px"><%= simple_format(@truyen.content_en)%></b></div></div>
         </div>
       </div>
     </div>
