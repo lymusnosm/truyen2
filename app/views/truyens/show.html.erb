@@ -206,7 +206,7 @@
       </div>
     </div>
 
-    <div class="section image text-primary">
+    <div class="section image">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center"><h2><%=@truyen.name_vn%></h2></div>
@@ -215,24 +215,10 @@
         <br>
         <div class="row">
           <div class="col-md-6"><div class="section">
-            <% @vns.each do |t|%>
-              <% if t=="" %>
-                <br/>
-              <% elsif t!=@vns[0] %>
-                <br/><br/><br/><br/><br/><br/><br/><br/>
-              <%end%>
                 <b class="lead le" align = "justify"><%= simple_format(t)%></b>
-            <%end%>
           </div></div>
           <div class="col-md-6"><div class="section">
-            <% @ens.each do |t|%>
- 	      <% if t=="" %>
-                <br/>
-              <% elsif t!=@ens[0] %>
-                <br/><br/><br/><br/><br/><br/><br/><br/>
-              <%end%>
               <b class="lead le" align = "justify"><%= simple_format(t)%></b>
-            <%end%>
           </div></div>
         </div>
       </div>
