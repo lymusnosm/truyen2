@@ -2,6 +2,9 @@ class TruyensController < ApplicationController
   def show
     @theloais=Theloai.all
     @truyen = Truyen.find(params[:id])
+    @vns = @truyen.content_vn.split("FAM")
+    @ens = @truyen.content_en.split("FAM")
+
     @binhluans=@truyen.binhluans.order("updated_at DESC")
     @binhluan = Binhluan.new
     @binhluan_num=@truyen.binhluans.count

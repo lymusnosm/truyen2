@@ -29,17 +29,16 @@
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: "Comic Sans MS", cursive, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Arial", cursive, sans-serif;
 }
 
 p,h1,h2,h3,h4,h5,h6,a,i {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Arial", cursive, sans-serif;
 }
 
 h1 {
