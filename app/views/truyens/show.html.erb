@@ -206,7 +206,7 @@
       </div>
     </div>
 
-    <div class="section image">
+    <div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-center"><h2><%=@truyen.name_vn%></h2></div>
@@ -215,10 +215,10 @@
         <br>
         <div class="row">
           <div class="col-md-6"><div class="section">
-                <b class="lead le" align = "justify"><%= simple_format(@truyen.content_vn)%></b>
+                <b class="lead le" align = "justify"><%= simple_format(@truyen.content_vn.gsub("FAM", ""))%></b>
           </div></div>
           <div class="col-md-6"><div class="section">
-              <b class="lead le" align = "justify"><%= simple_format(@truyen.content_en)%></b>
+              <b class="lead le" align = "justify"><%= simple_format(@truyen.content_en.gsub("FAM", ""))%></b>
           </div></div>
         </div>
       </div>
