@@ -13,20 +13,20 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: sql10175721
-  password: jLUH4argMB
+  username: sql10177149
+  password: FSNYnHmZwG
   host: sql10.freesqldatabase.com
 
 development:
   <<: *default
-  database: sql10175721
+  database: sql10177149
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &test
   <<: *default
-  database: sql10175721
+  database: sql10177149
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,9 +49,9 @@ test: &test
 #
 production:
   <<: *default
-  database: sql10175721
-  username: sql10175721
-  password: jLUH4argMB
+  database: sql10177149
+  username: sql10177149
+  password: FSNYnHmZwG
 
 cucumber:
   <<: *test
